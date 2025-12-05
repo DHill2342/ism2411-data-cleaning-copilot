@@ -54,8 +54,8 @@ sales_df['DATE_SOLD'].fillna(method='bfill', inplace=True)
 #Negative values are not possible and will cause errors in calculations
 
 def remove_invalid_rows(sales_df):
-    sales_df = sales_df[sales_df['PRICE'] > 0]
-    sales_df = sales_df[sales_df['QTY'] > 0]
+    sales_df = sales_df[sales_df['PRICE'] >= 0]
+    sales_df = sales_df[sales_df['QTY'] >= 0]
     return sales_df
 sales_df = remove_invalid_rows(sales_df)
 
