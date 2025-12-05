@@ -58,8 +58,13 @@ def remove_invalid_rows(sales_df):
     sales_df = sales_df[sales_df['QTY'] > 0]
     return sales_df
 sales_df = remove_invalid_rows(sales_df)
-print(sales_df)
 
+
+
+#Save the cleaned DataFrame to a new CSV file
+sales_df.to_csv('ism2411-data-cleaning-copilot/data/processed/sales_data_clean.csv', index=False)
+print("Cleaned data saved to sales_data_clean.csv")
+print(f"\nFirst few rows of cleaned dataset: \n{sales_df.head()}")
 
 
 
