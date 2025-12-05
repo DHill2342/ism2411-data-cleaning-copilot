@@ -1,11 +1,11 @@
-#The overall purpose of this script is to clean the raw data from sales_data_raw.csv
+#The overall purpose of this script is to clean a messy dataset containing sales data.
 
 import pandas as pd
 import numpy as np
 
 sales_df = pd.read_csv('ism2411-data-cleaning-copilot/data/raw/sales_data_raw.csv')
 
-print(sales_df)
+print(sales_df.head())
 #Standardize column names to uppercase
 #Ensure all column names are in uppercase for consistency and ease of reading
 #Ensure there are no leading or trailing spaces in column names
